@@ -10,7 +10,8 @@
 	--background-color: white;
 	--default-text-color: black;
 	--chapter-bg: var(--green-bg);
-	--footnote-box: #FFFAD8;/*lightyellow;*/
+	--footnote-box: #FFFAD8;
+	/*lightyellow;*/
 	--footnote-box-border: lightgrey;
 	--footnote-hover-border: var(--m-and-c-blue);
 	--footnote-shadow: var(--chapter-bg);
@@ -53,7 +54,7 @@ body {
 	width: 45em;
 	counter-reset: chapters sections subsections tables figures definitions examples toc-chapters appendices;
 	text-align: justify;
-	background-color: var(--background-color);
+	background-color: #3eff00;
 	color: var(--default-text-color);
 	hyphens: auto;
 	font-family: "Charis", serif;
@@ -72,6 +73,7 @@ div.cover {
 	left: calc(50vw - 523px);
 	width: 1047px;
 }
+
 .cover p {
 	font-family: sans-serif;
 	color: white;
@@ -80,11 +82,13 @@ div.cover {
 	margin: auto;
 	z-index: 10;
 }
+
 .cover p a {
 	font-style: inherit;
 	font: inherit;
 	color: inherit;
 }
+
 /**
  * 
  **/
@@ -102,24 +106,30 @@ div.cover {
 	padding-right: 5.5em;
 	line-height: 200%;
 }
+
 h1#title {
 	text-align: right;
 	vertical-align: middle;
 	margin: -1em;
 	padding: -1em;
 }
+
 h1#title .big-letter {
 	vertical-align: middle;
 	font-size: 350%;
 	color: var(--section-title);
 }
+
 header {
 	color: var(--header-text);
 }
-ul.authorlist, ul.reflist {
+
+ul.authorlist,
+ul.reflist {
 	list-style-type: none;
 	padding-left: 0;
 }
+
 .author {
 	/*font-variant: small-caps;*/
 	display: block;
@@ -127,6 +137,7 @@ ul.authorlist, ul.reflist {
 	margin: 0;
 	padding: 0;
 }
+
 .country {
 	display: none;
 }
@@ -134,15 +145,22 @@ ul.authorlist, ul.reflist {
 /**
  *  Chapter titles, (sub)section titles
  **/
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
 	font-family: "Quattrocento", serif;
 }
+
 h2 {
 	margin-top: 2.5em;
 	color: var(--section-title);
 	font-size: 190%;
 }
-h2#abstract, #theend, #keywords {
+
+h2#abstract,
+#theend,
+#keywords {
 	font-weight: 100;
 	text-align: center;
 	margin: auto;
@@ -150,43 +168,61 @@ h2#abstract, #theend, #keywords {
 	line-height: .1em;
 	padding-top: 3em;
 }
-h2#abstract span, #theend span, #keywords span {
+
+h2#abstract span,
+#theend span,
+#keywords span {
 	background: var(--background-color);
 }
-h2#abstract span:before, #theend span:before, #keywords span:before {
+
+h2#abstract span:before,
+#theend span:before,
+#keywords span:before {
 	content: " ☙ ";
 }
-h2#abstract span:after, #theend span:after, #keywords span:after {
+
+h2#abstract span:after,
+#theend span:after,
+#keywords span:after {
 	content: " ❧ ";
 }
+
 .info {
-	color: var(--default-text-color);;
+	color: var(--default-text-color);
+	;
 }
+
 /*.info dl dt {*/
 dl dt {
 	font-weight: bold;
 }
+
 h3 {
 	margin-top: 2.1em;
 	color: var(--section-title);
 	font-size: 150%;
 	font-variant: small-caps;
 }
+
 h4 {
 	margin-top: 1.7em;
 	color: var(--section-title);
 	font-size: 120%;
 }
+
 h5.subsubsection {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
-.paragraph, h5 {
+
+.paragraph,
+h5 {
 	font-weight: 900;
 	font-size: 100%;
 	font-style: normal;
 	color: var(--section-title);
 }
+
 table {
 	font-size: 98%;
 	border-collapse: collapse;
@@ -196,28 +232,34 @@ table {
 	margin-bottom: 25px;
 	margin-bottom: 20px;
 }
+
 dl.definition dd table tr td {
 	vertical-align: top;
 }
+
 thead th {
 	border-bottom: 2px solid var(--default-text-color);
 }
+
 tfoot td {
 	border-top: 1px solid var(--default-text-color);
-	border-bottom: 2px solid var(--default-text-color);	
+	border-bottom: 2px solid var(--default-text-color);
 }
+
 table caption {
 	text-align: justify;
 	max-width: 95%;
 	width: max-content;
 	margin: auto;
 }
+
 table caption:before {
 	counter-increment: tables;
-	color:  var(--tab-fig-caption-mark);
+	color: var(--tab-fig-caption-mark);
 	content: "Table " counter(chapters) "." counter(tables) ": ";
 }
-section > figure {
+
+section>figure {
 	max-width: 100%;
 	margin: auto;
 	text-align: center;
@@ -225,62 +267,76 @@ section > figure {
 	margin-bottom: 25px;
 	margin-bottom: 20px;
 }
-figure > img {
+
+figure>img {
 	margin-top: 3em;
 	margin-bottom: 3em;
 	transform: scale(1.3);
 }
+
 figcaption {
 	font-size: 90%;
 }
-section > figure > figcaption {
+
+section>figure>figcaption {
 	/*text-align: left;*/
 	max-width: 95%;
 	text-align: justify;
 	width: max-content;
 	margin: auto;
 }
-figure > figcaption:before {
+
+figure>figcaption:before {
 	counter-increment: figures;
-	color:  var(--tab-fig-caption-mark);
+	color: var(--tab-fig-caption-mark);
 	content: "Figure " counter(chapters) "." counter(figures) ": ";
 }
-figure > figure > figcaption:before {
+
+figure>figure>figcaption:before {
 	counter-increment: subfigures;
 	content: "(" counter(subfigures, lower-alpha) ") ";
 }
+
 img.multi {
 	margin-left: 3em;
 	float: left;
 }
+
 img.inlined {
 	margin-top: .5em;
 	margin-bottom: .5em;
 	margin-left: 2.5em;
 	margin-right: 2.5em;
 }
+
 img.inlined:first-child {
 	margin-top: 3em;
 }
+
 figure dl dt {
 	float: left;
 	width: 5em;
 	margin-left: 1em;
 	text-align: right;
 }
+
 figure dl dd {
 	margin-left: 7em;
 	text-align: left;
 }
-figure dl dd img.inlined:first-child, figure dl dd img.inlined {
+
+figure dl dd img.inlined:first-child,
+figure dl dd img.inlined {
 	margin: 0;
 	vertical-align: middle;
 }
+
 img.inside {
 	transform: scale(1.1);
 	margin: .5em;
 	vertical-align: middle;
 }
+
 figure a.git {
 	opacity: 30%;
 	display: inline-block;
@@ -292,13 +348,16 @@ figure a.git {
 	height: 1.4em;
 	transition: all 200ms ease-in-out;
 }
+
 figure a.git:hover {
 	opacity: 100%;
 }
+
 .chapter {
 	counter-reset: sections subsections figures tables definitions examples;
 }
-.chapter > h2:before {
+
+.chapter>h2:before {
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -308,7 +367,8 @@ figure a.git:hover {
 	counter-increment: chapters;
 	content: "Chapter " counter(chapters);
 }
-.chapter > h2 {
+
+.chapter>h2 {
 	position: relative;
 	margin-top: 7em;
 	margin-left: -5em;
@@ -316,24 +376,29 @@ figure a.git:hover {
 	background-color: var(--chapter-bg);
 	text-align: center;
 }
-.prechapter > h2 {
+
+.prechapter>h2 {
 	margin-top: 7em;
 	margin-left: -5em;
 	font-weight: bold;
 	background-color: var(--chapter-bg);
 	text-align: center;
 }
+
 .section {
 	counter-reset: subsections;
 }
-.section > h3:before {
+
+.section>h3:before {
 	counter-increment: sections;
 	margin-right: 2em;
 	content: counter(chapters) "." counter(sections);
 }
+
 .subsection {
 	font-variant: small-caps;
 }
+
 h4.subsection:before {
 	counter-increment: subsections;
 	margin-right: 1em;
@@ -356,10 +421,11 @@ h4.subsection:before {
 	max-width: 40em;
 	width: max-content;
 }
+
 .footnote:hover {
 	z-index: 200;
 	border: 2px solid var(--footnote-hover-border);
-	left: min(calc(100vw - 42em),calc(50vw + 24.5em));
+	left: min(calc(100vw - 42em), calc(50vw + 24.5em));
 	width: 40em;
 	box-shadow: 0 0 1em var(--footnote-shadow);
 }
@@ -367,16 +433,19 @@ h4.subsection:before {
 .footnote#fn23 {
 	margin-top: 1em;
 }
+
 .footnote#fn33 {
 	margin-top: 4em;
 }
 
-table#tab-related th, table#tab-related td {
+table#tab-related th,
+table#tab-related td {
 	font-size: 80%;
 	text-align: left;
 	vertical-align: bottom;
 	padding: .3em;
 }
+
 .rot {
 	transform: rotate(-80deg);
 	width: 0;
@@ -387,32 +456,46 @@ table#tab-related th, table#tab-related td {
 	vertical-align: bottom;
 	hyphens: none;
 }
-table.normalTable th, table.normalTable td {
+
+table.normalTable th,
+table.normalTable td {
 	padding: .41em;
 }
-table.normalTable th, table.condensedTable th {
+
+table.normalTable th,
+table.condensedTable th {
 	border-top: 2px solid var(--default-text-color);
 }
-table.normalTable td, table.condensedTable td {
+
+table.normalTable td,
+table.condensedTable td {
 	vertical-align: middle;
 	font-size: 90%;
 }
+
 table.normalTable td {
 	border-bottom: 1px solid var(--default-text-color);
 }
+
 table.normalTable td:first-child {
 	font-variant: small-caps;
 }
-table.normalTable tr:last-child td, table.condensedTable tr:last-child td {
+
+table.normalTable tr:last-child td,
+table.condensedTable tr:last-child td {
 	border-bottom: 2px solid var(--default-text-color);
 }
-table.condensedTable th, table.condensedTable td {
+
+table.condensedTable th,
+table.condensedTable td {
 	text-align: left;
 	padding-right: 1em;
 }
+
 table.condensedTable {
 	margin-bottom: 1.5em;
 }
+
 .subtabhead {
 	text-align: center;
 	border-top: 1px solid var(--default-text-color);
@@ -422,6 +505,7 @@ dl#outline dt {
 	float: left;
 	margin-right: 1em;
 }
+
 dl#outline dt:after {
 	content: ": ";
 }
@@ -430,6 +514,7 @@ a {
 	text-decoration: none;
 	color: var(--hyperlink);
 }
+
 .mathblock {
 	text-align: center;
 }
@@ -439,18 +524,23 @@ a {
 	font-size: 90%;
 	font-style: normal;
 }
+
 .sc {
 	font-variant: small-caps;
 	font-size: 90%;
 	font-style: normal;
 }
-.tt, code {
+
+.tt,
+code {
 	font-family: "Hasklig", monospace;
 	font-style: normal;
 }
+
 .underline {
 	text-decoration: underline;
 }
+
 .gnode {
 	font-family: "cmss8", sans-serif;
 	font-style: normal;
@@ -463,6 +553,7 @@ a {
 	display: inline-block;
 	background: linear-gradient(var(--gnode-gradient1), var(--gnode-gradient2));
 }
+
 .gvar {
 	font-style: normal;
 	display: inline-block;
@@ -474,6 +565,7 @@ a {
 	margin: 0;
 	background: linear-gradient(var(--gvar-gradient1), var(--gvar-gradient2));
 }
+
 .ginode {
 	font-style: normal;
 	display: inline-block;
@@ -486,6 +578,7 @@ a {
 	margin: 0;
 	background: linear-gradient(var(--ginode-gradient1), var(--ginode-gradient2));
 }
+
 .iedge {
 	font-style: normal;
 	color: var(--iedge-text);
@@ -496,6 +589,7 @@ a {
 	padding-right: .15em;
 	padding-left: .15em;
 }
+
 .markupf {
 	font-style: normal;
 	color: #503;
@@ -506,6 +600,7 @@ a {
 	padding-right: .1em;
 	padding-left: .1em;
 }
+
 .shap {
 	font-style: normal;
 	font-size: 80%;
@@ -515,6 +610,7 @@ a {
 	display: inline-block;
 	background-color: var(--shap-bg);
 }
+
 .tnode {
 	font-style: normal;
 	font-size: 80%;
@@ -524,6 +620,7 @@ a {
 	display: inline-block;
 	background-color: var(--tnode-bg);
 }
+
 .stack {
 	display: inline-block;
 	position: relative;
@@ -531,14 +628,17 @@ a {
 	margin-top: -1em;
 	text-align: center;
 }
+
 .stack span:last-child {
 	position: relative;
 	top: -0.9em;
 }
+
 .stack-tab {
 	display: inline-block;
 	vertical-align: middle;
 }
+
 .edge {
 	font-style: normal;
 	display: inline-block;
@@ -549,15 +649,18 @@ a {
 	padding-right: .15em;
 	padding-left: .15em;
 }
+
 .uri {
 	font-style: normal;
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 92%;
 }
+
 .uris code {
 	font-size: 85%;
 }
+
 img.tip {
 	border: none;
 	margin: 0;
@@ -565,6 +668,7 @@ img.tip {
 	position: relative;
 	bottom: -.1em;
 }
+
 .tip {
 	display: inline-block;
 	border: none;
@@ -573,26 +677,31 @@ img.tip {
 	letter-spacing: -0.1em;
 	font-weight: bold;
 }
+
 .arc {
 	color: #BF0040;
 }
+
 .arc.left,
 .arc.right {
 	position: relative;
 	bottom: -.13em;
 }
+
 .arc.left {
-	transform: scale(-1,1.1);
+	transform: scale(-1, 1.1);
 }
+
 .arc.right {
-	transform: scale(1,1.1);
+	transform: scale(1, 1.1);
 }
 
 .iarc {
 	color: #994c00;
 }
+
 .iarc.source {
-	transform: scale(1,2);
+	transform: scale(1, 2);
 	position: relative;
 	bottom: .13em;
 }
@@ -604,6 +713,7 @@ img.tip {
 	font-size: 90%;
 	display: inline-block;
 }
+
 .gielab {
 	font-style: normal;
 	color: var(--gielab-color);
@@ -619,6 +729,7 @@ img.tip {
 img.todo {
 	border: 1px solid red;
 }
+
 .ref-NONE {
 	color: red;
 }
@@ -632,10 +743,12 @@ img.todo {
 section#chap-defs {
 	counter-reset: chapters;
 }
+
 .appendix {
 	counter-reset: sections subsections;
 }
-.appendix > h2:before {
+
+.appendix>h2:before {
 	position: relative;
 	font-weight: 100;
 	left: 5em;
@@ -644,24 +757,29 @@ section#chap-defs {
 	counter-increment: chapters;
 	content: "Appendix " counter(chapters, upper-alpha);
 }
-.appendix > h2 {
+
+.appendix>h2 {
 	margin-top: 7em;
 	margin-left: -5em;
 	font-weight: bold;
 	background-color: var(--chapter-bg);
 	text-align: center;
 }
+
 .sectionapp {
 	counter-reset: subsections;
 }
-.sectionapp > h3:before {
+
+.sectionapp>h3:before {
 	counter-increment: sections;
 	margin-right: 2em;
 	content: counter(chapters, upper-alpha) "." counter(sections) ". ";
 }
+
 .ssectionapp {
 	font-variant: small-caps;
 }
+
 h4.ssectionapp:before {
 	counter-increment: subsections;
 	margin-right: 1em;
@@ -672,18 +790,22 @@ ul#def-categories {
 	list-style-type: none;
 	counter-reset: def-categories;
 }
-ul#def-categories > li {
+
+ul#def-categories>li {
 	text-indent: -2em;
 	margin-bottom: .5em;
 }
-ul#def-categories > li:before {
+
+ul#def-categories>li:before {
 	font-style: italic;
 	counter-increment: def-categories;
 	content: "Category " counter(def-categories, upper-roman) ": ";
 }
+
 ul#def-categories li li {
 	text-indent: 0;
 }
+
 /* ************************/
 /*                        */
 /*  Style of definitions  */
@@ -699,31 +821,37 @@ dl.definition {
 	border-radius: 0.8em;
 	page-break-inside: avoid;
 }
+
 dl.definition dt:before {
 	content: "Definition " counter(chapters) "." counter(definitions) " (";
 	font-weight: bold;
 	font-style: normal;
 }
+
 dl.definition dt:after {
 	font-weight: bold;
 	content: ")";
 	font-style: normal;
 }
+
 dl.definition dt {
 	border-bottom: 1px solid var(--definition-headline);
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
+
 dl.definition dd {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 	font-style: italic;
 	text-indent: 0.3em;
 }
+
 dl.definition dd p {
 	margin: 0;
 	padding: 0;
 }
+
 dl.definition dd em[id] {
 	font-style: normal;
 }
@@ -739,9 +867,11 @@ div.example {
 	font-style: italic;
 	counter-increment: examples;
 }
+
 div.example em[id] {
 	font-style: normal;
 }
+
 /*div.example p:first-child {
 	text-indent: 0;
 }*/
@@ -759,6 +889,7 @@ div.example p:first-child:before {
 	/*margin-left: 3em;*/
 	padding-left: 3.5em;
 }
+
 #tab-gnn td {
 	text-align: left;
 }
@@ -769,61 +900,75 @@ div.example p:first-child:before {
 	font-family: "cmss8", sans-serif;
 	font-size: 88%;
 }
-#unesco > p {
+
+#unesco>p {
 	background-color: var(--webpage-bg);
 	margin-bottom: 0;
 	margin-right: 2.8em;
 }
-#unesco > p:before {
+
+#unesco>p:before {
 	content: "? ";
 	color: black;
 }
-#unesco > p:after {
+
+#unesco>p:after {
 	content: " ×";
 	color: var(--default-text-color);
 }
-#unesco > div {
+
+#unesco>div {
 	padding: .2em;
 	background-color: var(--webpage-bg);
 	border: 1px solid var(--default-textx-color);
 }
+
 .html-h1 {
 	font-size: 185%;
 	font-weight: bold;
 }
+
 .html-h2 {
 	font-size: 145%;
 	font-weight: bold;
 }
+
 #html-table {
 	border-collapse: collapse;
 }
+
 #html-table td,
 #html-table th {
 	padding: .1em;
 	margin 0;
 	border: 1px solid var(--default-text-color);
 }
+
 #fig-rdbCrime div {
 	font-family: Hasklig;
 	font-size: 90%;
 }
+
 #fig-rdbCrime p {
 	font-size: 130%;
 	font-weight: bold;
 	text-align: left;
 	margin-bottom: 0;
 }
+
 #fig-rdbCrime table th {
 	border-bottom: 2px solid var(--default-text-color);
 }
+
 #report {
 	float: left;
 	width: 60%;
 }
+
 #report p {
 	margin-left: 1em;
 }
+
 #claimant {
 	margin-left: 61%;
 }
@@ -845,6 +990,7 @@ div.example p:first-child:before {
 	background-color: var(--background-color);
 	z-index: 1010;
 }
+
 #toc div {
 	border-left: 1px dashed var(--toc-border);
 	position: relative;
@@ -858,6 +1004,7 @@ div.example p:first-child:before {
 	background-position-y: calc(50vh - 3em);
 	color: inherit;
 }
+
 #toc div p {
 	vertical-align: middle;
 	position: relative;
@@ -869,11 +1016,13 @@ div.example p:first-child:before {
 	transform-origin: left;
 	color: inherit;
 }
+
 #toc:hover {
 	left: 0;
 	color: var(--toc-hover);
 }
-#toc > ol {
+
+#toc>ol {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -883,7 +1032,8 @@ div.example p:first-child:before {
 	padding-top: .5em;
 	list-style-type: none;
 }
-#toc > ol > li {
+
+#toc>ol>li {
 	margin: 0;
 	vertical-align: middle;
 	padding: .5em;
@@ -895,33 +1045,40 @@ div.example p:first-child:before {
 	transition: all 200ms ease-in-out;
 	color: grey;
 }
-#toc > ol > li > ol > li {
+
+#toc>ol>li>ol>li {
 	height: 1.5em;
 }
-#toc > ol ol {
+
+#toc>ol ol {
 	margin-top: 1em;
 	padding-left: 0;
 	margin-left: 0;
 	list-style-type: none;
 	display: none;
 }
+
 #toc a {
 	color: inherit;
 }
-#toc > ol > li#toc-filler {
+
+#toc>ol>li#toc-filler {
 	border: none;
 	background-color: var(--background-color);
 	padding-bottom: calc(100vh - 4 * 14em);
 }
-#toc > ol > li:not(#toc-filler):hover {
+
+#toc>ol>li:not(#toc-filler):hover {
 	font-weight: bold;
 	color: var(--toc-hover);
 }
-#toc > ol > li:not(#toc-filler):hover > ol,
-#toc > ol > li:not(#toc-filler):hover > ol > li:hover > ol {
+
+#toc>ol>li:not(#toc-filler):hover>ol,
+#toc>ol>li:not(#toc-filler):hover>ol>li:hover>ol {
 	display: block;
 }
-#toc > ol > li:not(#toc-filler):hover > ol {
+
+#toc>ol>li:not(#toc-filler):hover>ol {
 	left: 3em;
 	top: -1.3em;
 	height: max-content;
@@ -932,6 +1089,7 @@ div.example p:first-child:before {
 	border: 1.5px solid var(--toc-hover);
 	background-color: var(--background-color);
 }
+
 #toc ol ol ol {
 	position: relative;
 	height: max-content;
@@ -944,6 +1102,7 @@ div.example p:first-child:before {
 	border: 1.5px solid var(--toc-hover);
 	box-shadow: 0 0 1em var(--footnote-shadow);
 }
+
 div#aboutlink {
 	font-family: Hasklig;
 	font-weight: bold;
@@ -961,6 +1120,7 @@ div#aboutlink {
 	border-radius: .5em;
 	color: var(--toc-hover);
 }
+
 div#aboutlink div {
 	position: fixed;
 	text-align: justify;
@@ -981,6 +1141,7 @@ div#aboutlink div {
 	font-weight: normal;
 	transition: all 500ms ease-in-out;
 }
+
 div#aboutlink:hover div {
 	display: block;
 	height: 7em;
@@ -989,44 +1150,56 @@ div#aboutlink:hover div {
 	border: 2px solid var(--footnote-hover-border);
 	box-shadow: 0 0 1em var(--footnote-shadow);
 }
+
 .formal {
 	padding: .1em 1em .1em 1em;
 	margin-top: .5em;
-	margin-bottom:  .5em;
-	background-color:  var(--formal-bg);
+	margin-bottom: .5em;
+	background-color: var(--formal-bg);
 }
+
 .formal-table {
 	font-size: 90%;
 	border: 1px solid var(--formal-table-border);
 }
+
 .formal-table .subtabhead {
 	background-color: var(--subtabhead);
 }
+
 .formal-table table {
 	width: 95%;
 }
+
 .formal-table table#tab-kges caption {
 	width: 95%;
 }
+
 .formal-table tbody tr:nth-child(odd) {
-	background-color: var(--table-odd-rows);	
+	background-color: var(--table-odd-rows);
 }
+
 #sec-references ul li p {
 	text-indent: -2em;
 }
+
 ul.reflist li {
 	position: relative;
 }
+
 ul.reflist li p {
 	margin: 0;
 	padding: 0;
 }
+
 ul.reflist li pre {
 	display: none;
 }
+
 ul.reflist li:hover p {
 	color: var(--bibref-hover);
 }
+
 ul.reflist li:hover pre {
 	display: block;
 	position: absolute;
@@ -1037,6 +1210,7 @@ ul.reflist li:hover pre {
 	z-index: 1;
 	transition: all 500ms ease-in-out;
 }
+
 ul.reflist li:hover pre:hover {
 	left: 3em;
 	width: calc(50vw + 17em);
